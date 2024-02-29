@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- image tag -->
+    <a onclick="myFunction()" href="https://facebook.com">
+      <img height="250px" width="250px" src=
+      "cake.jpg" alt="Cake Image" />
+    </a>
+
+    <!-- image map -->
+    <img
+      usemap="#workmap"
+      height="250px"
+      width="250px"
+      src="cake.jpg"
+      alt="Cake Image"
+    />
+
+    <!-- in the cors of of map, x and y coordinates are placed -->
+    <!-- coords = coordinates -->
+    <map onclick="myFunction()" name="workmap">
+      <!-- if shape = defaul tin the area tag, it is same as wrapping the image tag in a anchor tag -->
+      <area
+        shape="rect"
+        coords="34,44,270,30"
+        href="https://rectangle.com"
+        alt="youtube"
+      />
+
+      <!-- 2 center points and one radiu -->
+      <area
+        shape="circle"
+        coords="337, 300, 44"
+        href="https://circle.com"
+        alt="youtube"
+      />
+    </map>
+  </body>
+  <script src="index.js"></script>
+</html>

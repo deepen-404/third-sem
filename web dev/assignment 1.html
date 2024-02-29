@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Information Form</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      label {
+        font-weight: bold;
+      }
+      form {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem 4rem;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="email"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        background-color: #007bff;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+      }
+      input::placeholder {
+        font-family: "Poppins", sans-serif;
+      }
+      input[type="submit"]:hover,
+      input[type="rest"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Student Form</legend>
+      <form
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: center;
+        "
+        action="save.php"
+        method="post"
+      >
+        <h2>Student Information Form</h2>
+        <label for="Roll no:">Roll no:</label>
+        <input
+          readonly
+          type="hidden"
+          placeholder="Enter your roll no"
+          type="text"
+          id="Roll no:"
+          name="Roll no:"
+        />
+        <label for="name">Name:</label>
+        <input
+          placeholder="Enter your name"
+          type="text"
+          id="name"
+          name="name"
+        />
+        <label for="phone">Phone:</label>
+        <input
+          placeholder="Enter your phone"
+          type="text"
+          id="phone"
+          name="phone"
+        />
+        <label for="email">Email:</label>
+        <input
+          placeholder="Enter your email"
+          type="email"
+          id="email"
+          name="email"
+        />
+        <label>Address:</label>
+        <input
+          for="address"
+          Enter
+          your
+          address
+          placeholder="Enter your address"
+          type="text"
+          id="address"
+          name="address"
+        />
+        <label for="course">Course:</label>
+        <input
+          placeholder="Enter your course"
+          type="text"
+          id="course"
+          name="course"
+        />
+        <label for="subject">Subject:</label>
+        <input
+          placeholder="Enter your subject"
+          type="text"
+          id="subject"
+          name="subject"
+        />
+        <label for="age">Age:</label>
+        <input
+          value="20"
+          readonly
+          placeholder="Enter your age"
+          min="1"
+          type="number"
+          id="age"
+          name="age"
+        /><br />
+        <div style="display: flex; gap: 1rem">
+          <label for="gender">Gender:</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label><br /><br />
+        </div>
+        <br />
+        <select style="padding: 0.5rem" id="Province">
+          <option value="Province 1">Province 1</option>
+          <option value="Province 2">Province 2</option>
+          <option value="Province 3">Province 3</option>
+          <option value="Province 4">Province 4</option>
+          <option value="Province 5">Province 5</option>
+        </select>
+        <br />
+        <label for="description">
+          <textarea
+            placeholder="Enter a description"
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </label>
+        <br />
+        <div
+          style="
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <input id="conditions" type="checkbox" />
+          <label for="conditions">Terms and Conditions</label>
+        </div>
+
+        <div style="margin-bottom: 1rem">
+          <label for="photo">Choose Photo:</label>
+          <input disabled id="file" type="file" accept="" />
+        </div>
+        <input type="submit" value="Save" />
+        <input type="reset" value="Clear" />
+      </form>
+    </fieldset>
+  </body>
+</html>
