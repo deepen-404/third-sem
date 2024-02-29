@@ -16,7 +16,7 @@ int top = -1;
 int main()
 {
 
-    system("clear");
+    system("cls");
     printf("How many element do you want to store???\t:");
     scanf("%d", &size);
     int stack[size];
